@@ -11,33 +11,33 @@
 
 @layer base {
   :root {
-    /* Core Palette - Pure Monochrome */
+    /* Core Palette - White & Mint Accent */
     --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
+    --foreground: 0 0% 10%;
     
     /* Card surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card-foreground: 0 0% 10%;
     
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover-foreground: 0 0% 10%;
     
-    /* Primary - Deep Black */
-    --primary: 0 0% 5%;
+    /* Primary - Mint Accent #1cd7b6 */
+    --primary: 168 79% 48%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Off White */
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 5%;
+    /* Secondary - Light Mint */
+    --secondary: 168 40% 96%;
+    --secondary-foreground: 0 0% 10%;
     
     /* Muted - Subtle Gray */
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
     
-    /* Accent */
-    --accent: 0 0% 92%;
-    --accent-foreground: 0 0% 5%;
+    /* Accent - Mint */
+    --accent: 168 79% 48%;
+    --accent-foreground: 0 0% 100%;
     
     /* Destructive */
     --destructive: 0 84% 60%;
@@ -46,13 +46,14 @@
     /* Border & Input */
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 5%;
+    --ring: 168 79% 48%;
     
     --radius: 0px;
     
     /* Custom tokens */
-    --studio-gold: 45 30% 50%;
-    --overlay-dark: 0 0% 0% / 0.6;
+    --mint: 168 79% 48%;
+    --mint-dark: 168 79% 38%;
+    --overlay-dark: 0 0% 0%;
   }
 
   .dark {
@@ -102,13 +103,14 @@
 @layer components {
   /* Hero overlay */
   .hero-overlay {
-    @apply absolute inset-0;
+    position: absolute;
+    inset: 0;
     background: linear-gradient(
       to bottom,
-      hsl(var(--overlay-dark)),
+      hsla(0, 0%, 0%, 0.5),
       transparent 40%,
       transparent 60%,
-      hsl(var(--overlay-dark))
+      hsla(0, 0%, 0%, 0.5)
     );
   }
   
@@ -131,11 +133,11 @@
   
   /* Minimal button */
   .btn-minimal {
-    @apply inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase border border-foreground bg-transparent text-foreground transition-all duration-300 hover:bg-foreground hover:text-background;
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase border border-foreground bg-transparent text-foreground transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary;
   }
   
   .btn-minimal-inverse {
-    @apply inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase border border-background bg-transparent text-background transition-all duration-300 hover:bg-background hover:text-foreground;
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase border border-background bg-transparent text-background transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary;
   }
   
   /* Underline animation */

@@ -48,7 +48,7 @@ const Contact = () => {
             href="https://pf.kakao.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-minimal-inverse flex items-center justify-center gap-3"
+            className="inline-flex items-center justify-center gap-3 px-8 py-3 text-sm tracking-widest uppercase border border-background bg-transparent text-background transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
           >
             <MessageCircle size={18} />
             KakaoTalk
@@ -57,14 +57,14 @@ const Contact = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-minimal-inverse flex items-center justify-center gap-3"
+            className="inline-flex items-center justify-center gap-3 px-8 py-3 text-sm tracking-widest uppercase border border-background bg-transparent text-background transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
           >
             <Instagram size={18} />
             Instagram
           </a>
           <a
             href="mailto:info@inkavenuetattoo.com"
-            className="btn-minimal-inverse flex items-center justify-center gap-3"
+            className="inline-flex items-center justify-center gap-3 px-8 py-3 text-sm tracking-widest uppercase border border-background bg-transparent text-background transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
           >
             <Mail size={18} />
             Email
