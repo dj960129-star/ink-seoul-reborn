@@ -62,7 +62,7 @@ const Portfolio = () => {
               onClick={() => setActiveCategory(category)}
               className={`text-caption pb-2 border-b transition-all duration-300 ${
                 activeCategory === category 
-                  ? "border-foreground text-foreground" 
+                  ? "border-primary text-primary" 
                   : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
             >

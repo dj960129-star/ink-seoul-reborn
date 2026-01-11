@@ -60,7 +60,7 @@ const Artists = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="artist-card"
+              className="artist-card group"
             >
               <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <img
@@ -79,7 +79,7 @@ const Artists = () => {
                   href={artist.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-foreground hover:text-background transition-colors duration-300"
+                  className="p-2 hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
                   aria-label={`${artist.name} Instagram`}
                 >
                   <Instagram size={18} />

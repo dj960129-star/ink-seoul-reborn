@@ -21,14 +21,14 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 hover:bg-background hover:text-foreground transition-colors duration-300"
+              className="p-2 hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               aria-label="Instagram"
             >
               <Instagram size={20} />
             </a>
             <a
               href="mailto:info@inkavenuetattoo.com"
-              className="p-2 hover:bg-background hover:text-foreground transition-colors duration-300"
+              className="p-2 hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               aria-label="Email"
             >
               <Mail size={20} />
