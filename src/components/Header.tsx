@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Artists", href: "#artists" },
-  { name: "Portfolio", href: "#portfolio" },
+  { name: "Home", href: "#" },
+  { name: "News", href: "#news" },
+  { name: "Styles", href: "#styles" },
   { name: "Contact", href: "#contact" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Address", href: "#address" },
 ];
 
 const Header = () => {

@@ -18,7 +18,7 @@ const works = [
   { id: 12, category: "Traditional", image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=2070&auto=format&fit=crop" },
 ];
 
-const Portfolio = () => {
+const Styles = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredWorks = activeCategory === "All" 
@@ -26,7 +26,7 @@ const Portfolio = () => {
     : works.filter(work => work.category === activeCategory);
 
   return (
-    <section id="portfolio" className="section-padding bg-background">
+    <section id="styles" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ const Portfolio = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-heading text-center mb-12"
         >
-          Portfolio
+          Styles
         </motion.h2>
 
         {/* Category Filter */}
@@ -123,4 +123,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Styles;
