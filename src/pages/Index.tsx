@@ -1,9 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Artists from "@/components/Artists";
-import Portfolio from "@/components/Portfolio";
+import News from "@/components/News";
+import Styles from "@/components/Styles";
 import Contact from "@/components/Contact";
+import FAQ from "@/components/FAQ";
+import Address from "@/components/Address";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,10 +13,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Artists />
-        <Portfolio />
+        <News />
+        <Styles />
         <Contact />
+        <FAQ />
+        <Address />
       </main>
       <Footer />
     </div>
