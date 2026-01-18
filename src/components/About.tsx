@@ -9,7 +9,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-subheading text-muted-foreground mb-8"
+          className="text-subheading text-primary mb-8"
         >
           About Us
         </motion.p>
@@ -52,15 +52,15 @@ const About = () => {
           className="mt-16 flex flex-col md:flex-row justify-center gap-12 md:gap-24"
         >
           <div>
-            <p className="text-4xl font-light mb-2">10+</p>
+            <p className="text-4xl font-light mb-2 text-primary">10+</p>
             <p className="text-caption text-muted-foreground">Years Experience</p>
           </div>
           <div>
-            <p className="text-4xl font-light mb-2">5,000+</p>
+            <p className="text-4xl font-light mb-2 text-primary">5,000+</p>
             <p className="text-caption text-muted-foreground">Happy Clients</p>
           </div>
           <div>
-            <p className="text-4xl font-light mb-2">4</p>
+            <p className="text-4xl font-light mb-2 text-primary">4</p>
             <p className="text-caption text-muted-foreground">Expert Artists</p>
           </div>
         </motion.div>

@@ -51,7 +51,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`link-underline text-caption transition-colors duration-300 ${
+                className={`link-underline text-caption transition-colors duration-300 hover:text-primary ${
                   isScrolled ? "text-foreground" : "text-background"
                 }`}
               >
@@ -109,7 +109,7 @@ const Header = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-heading"
+                    className="text-heading hover:text-primary transition-colors duration-300"
                   >
                     {link.name}
                   </motion.a>

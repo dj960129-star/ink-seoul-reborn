@@ -10,7 +10,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-subheading text-background/60 mb-4"
+          className="text-subheading text-primary mb-4"
         >
           Get In Touch
         </motion.p>
