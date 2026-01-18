@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Address from "@/components/Address";
 import Footer from "@/components/Footer";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Address />
       </main>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };
