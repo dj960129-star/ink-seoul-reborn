@@ -33,7 +33,7 @@ const Portfolio = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-subheading text-muted-foreground text-center mb-4"
+          className="text-subheading text-primary text-center mb-4"
         >
           Our Work
         </motion.p>
@@ -113,7 +113,7 @@ const Portfolio = () => {
             href="https://instagram.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="btn-minimal"
+            className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase border border-primary bg-transparent text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
           >
             View More on Instagram
           </a>

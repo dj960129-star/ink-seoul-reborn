@@ -37,7 +37,7 @@ const Artists = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-subheading text-muted-foreground text-center mb-4"
+          className="text-subheading text-primary text-center mb-4"
         >
           Our Team
         </motion.p>
@@ -72,7 +72,7 @@ const Artists = () => {
               
               <div className="pt-6 flex items-start justify-between">
                 <div>
-                  <h3 className="text-lg tracking-widest font-light">{artist.name}</h3>
+                  <h3 className="text-lg tracking-widest font-light group-hover:text-primary transition-colors duration-300">{artist.name}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{artist.style}</p>
                 </div>
                 <a
