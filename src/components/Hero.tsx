@@ -48,8 +48,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-12"
         >
-          <a href="#portfolio" className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase bg-primary text-primary-foreground transition-all duration-300 hover:bg-primary/90">
-            View Works
+          <a href="#booking" className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-widest uppercase bg-primary text-primary-foreground transition-all duration-300 hover:bg-primary/90">
+            BOOK NOW
           </a>
         </motion.div>
       </div>
