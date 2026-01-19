@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Mail, MessageCircle, MapPin } from "lucide-react";
 import { useT } from "@/i18n/useT";
+import BookingForm from "./BookingForm";
 
 const Contact = () => {
   const { t } = useT();
@@ -37,6 +38,16 @@ const Contact = () => {
         >
           {t("booking.desc")}
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="max-w-4xl mx-auto"
+        >
+          <BookingForm />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
