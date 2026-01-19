@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Instagram, Mail, MessageCircle, MapPin } from "lucide-react";
+import { useT } from "@/i18n/useT";
 
 const Contact = () => {
+  const { t } = useT();
+
   return (
     <section id="contact" className="section-padding bg-foreground text-background">
       <div className="max-w-4xl mx-auto text-center">
@@ -22,7 +25,7 @@ const Contact = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-heading mb-8"
         >
-          Book Your Session
+          {t("booking.title")}
         </motion.h2>
 
         <motion.p
@@ -30,11 +33,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-body text-background/70 mb-12 max-w-2xl mx-auto"
+          className="text-body text-background/70 mb-12 max-w-2xl mx-auto whitespace-pre-line"
         >
-          상담 및 예약은 카카오톡 또는 인스타그램 DM으로 문의해주세요.
-          원하시는 디자인과 부위, 사이즈를 함께 알려주시면 
-          빠른 상담이 가능합니다.
+          {t("booking.desc")}
         </motion.p>
 
         <motion.div
@@ -81,13 +82,13 @@ const Contact = () => {
         >
           <div className="flex items-center justify-center gap-2 text-background/60 mb-4">
             <MapPin size={16} />
-            <span className="text-caption">Location</span>
+            <span className="text-caption">{t("location.label")}</span>
           </div>
           <p className="text-body text-background/80">
-            서울특별시 마포구 홍대입구역 인근
+            {t("location.area")}
           </p>
           <p className="text-sm text-background/50 mt-2">
-            정확한 위치는 예약 확정 시 안내드립니다
+            {t("location.notice")}
           </p>
         </motion.div>
       </div>
