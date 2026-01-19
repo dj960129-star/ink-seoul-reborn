@@ -1,19 +1,22 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
+import { useT } from "@/i18n/useT";
+import { languages, languageLabels, Language } from "@/i18n/translations";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "News", href: "#news" },
-  { name: "Styles", href: "#styles" },
-  { name: "Contact", href: "#contact" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Address", href: "#address" },
+  { key: "nav.home", href: "#" },
+  { key: "nav.news", href: "#news" },
+  { key: "nav.styles", href: "#styles" },
+  { key: "nav.contact", href: "#contact" },
+  { key: "nav.faq", href: "#faq" },
+  { key: "nav.address", href: "#address" },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, language, setLanguage } = useT();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,16 +54,51 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.key}
                 href={link.href}
                 className={`link-underline text-caption transition-colors duration-300 hover:text-primary ${
                   isScrolled ? "text-foreground" : "text-background"
                 }`}
               >
-                {link.name}
+                {t(link.key)}
               </a>
             ))}
           </nav>
+
+          {/* Instagram + Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Instagram Link */}
+            <a
+              href="https://www.instagram.com/ink_avenue/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className={`transition-opacity duration-300 hover:opacity-60 ${
+                isScrolled ? "text-foreground" : "text-background"
+              }`}
+            >
+              <Instagram size={18} />
+            </a>
+
+            {/* Language Switcher */}
+            <div className="flex items-center gap-1">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setLanguage(lang)}
+                  className={`px-2 py-1 text-xs tracking-wider transition-all duration-300 ${
+                    language === lang
+                      ? "text-primary"
+                      : isScrolled
+                      ? "text-foreground/60 hover:text-foreground"
+                      : "text-background/60 hover:text-background"
+                  }`}
+                >
+                  {languageLabels[lang]}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -105,7 +143,7 @@ const Header = () => {
               <nav className="flex flex-col items-center justify-center flex-1 gap-8">
                 {navLinks.map((link, index) => (
                   <motion.a
-                    key={link.name}
+                    key={link.key}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     initial={{ opacity: 0, y: 20 }}
@@ -113,9 +151,37 @@ const Header = () => {
                     transition={{ delay: index * 0.1 }}
                     className="text-heading hover:text-primary transition-colors duration-300"
                   >
-                    {link.name}
+                    {t(link.key)}
                   </motion.a>
                 ))}
+
+                {/* Mobile Instagram + Language */}
+                <div className="flex items-center gap-6 mt-4">
+                  <a
+                    href="https://www.instagram.com/ink_avenue/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="text-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    <Instagram size={24} />
+                  </a>
+                  <div className="flex items-center gap-2">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang}
+                        onClick={() => setLanguage(lang)}
+                        className={`px-2 py-1 text-sm tracking-wider transition-colors duration-300 ${
+                          language === lang
+                            ? "text-primary"
+                            : "text-foreground/60 hover:text-foreground"
+                        }`}
+                      >
+                        {languageLabels[lang]}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </nav>
             </div>
           </motion.div>
