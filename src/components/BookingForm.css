@@ -250,7 +250,7 @@
 
   .booking-form__options--twoCol {
     grid-template-columns: 1fr 1fr;
-    gap-column: 1.25rem;
+    column-gap: 1.25rem;
   }
 
   .booking-form__bottom {
